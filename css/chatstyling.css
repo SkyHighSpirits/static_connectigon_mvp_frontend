@@ -1,0 +1,31 @@
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.chat-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.chat-item {
+    border-bottom: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #555;
+    margin-right: 10px;
+}
+.profile-name {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+}

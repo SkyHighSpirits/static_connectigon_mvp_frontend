@@ -1,0 +1,29 @@
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #555;
+}
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 15px; /* Adjusted padding */
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+.nav-link:hover {
+    background-color: #555;
+}
+.profile-icon,
+.explore-icon,
+.chats-icon {
+    font-size: 20px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/globalstyling.css">
+    <link rel="stylesheet" href="../css/navstyling.css">
+    <link rel="stylesheet" href="../css/explore.css">
+
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="container">
+        <h2>Profiles</h2>
+        <div class="profile-grid" id="profile-grid">
+            <!-- Profiles will be dynamically added here -->
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="expanded-profile" id="expanded-profile">
+            <span class="close-btn" onclick="closeProfile()">&times;</span>
+            <div class="profile-img"></div>
+            <div class="profile-name" id="expanded-name"></div>
+            <div class="profile-details">
+                <p class="description" id="expanded-description"></p>
+                <button class="btn" onclick="sendMessage()">Send Message</button>
+                <button class="btn" onclick="likeProfile()">Like</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="nav-container">
+    <div class="navbar">
+        <a href="profile.html" class="nav-link"><i class="fas fa-user profile-icon"></i> Profile</a>
+        <a href="explore.html" class="nav-link"><i class="fas fa-search explore-icon"></i> Explore</a>
+        <a href="chats.html" class="nav-link"><i class="fas fa-comments chats-icon"></i> Chats</a>
+    </div>
+
+    <!-- Font Awesome CDN for icons -->
+
+</div>
+<script src="../javascript/explore.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
