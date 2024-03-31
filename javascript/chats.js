@@ -67,14 +67,14 @@ async function createChatItem(chat) {
 
 async function findOtherActor(chat)
 {
-    if(chat.user1 !== me)
+    if(chat.user1.email === me.email)
     {
-        them = chat.user1;
-        console.log(chat.user1)
+        them = chat.user2;
+        console.log(chat.user2)
     }
     else
     {
-        them = chat.user2
+        them = chat.user1
         console.log(chat.user1)
     }
 }

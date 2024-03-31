@@ -85,11 +85,41 @@ async function sendMessage() {
     closeProfile();
     let myProfileId = myProfile.id;
     let clickedProfileId = clickedProfile.id;
-    console.log(myProfileId)
-    console.log(clickedProfileId)
-    let theChat = await createChat(myProfileId, clickedProfileId);
-    localStorage.setItem("currentchat", theChat)
-    window.location.replace("messages.html")
+
+    let checkchat = await checkIfChatExists(myProfileId, clickedProfileId)
+    if(checkchat !== false)
+    {
+        localStorage.setItem("currentchat", checkchat)
+        window.location.replace("messages.html")
+    }
+    else
+    {
+        console.log(myProfileId)
+        console.log(clickedProfileId)
+        let theChat = await createChat(myProfileId, clickedProfileId);
+        localStorage.setItem("currentchat", theChat)
+        window.location.replace("messages.html")
+    }
+}
+
+async function checkIfChatExists(from, to) {
+    try {
+        const response = await fetch(`http://localhost:8080/checkchat?from=${from}&to=${to}`);
+
+        if (response.ok) {
+            const chatExists = await response.json(); // Convert response body to JSON
+            console.log('Chat existence checked successfully:', chatExists);
+            return chatExists; // Return the result indicating whether the chat exists
+        } else if (response.status === 404) {
+            console.log('Chat does not exist.');
+            return false; // Return false if the chat does not exist
+        } else {
+            throw new Error('Failed to check chat existence');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to check chat existence. Please try again later.');
+    }
 }
 
 async function createChat(from, to) {
