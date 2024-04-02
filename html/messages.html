@@ -5,8 +5,21 @@
     <title>Chats</title>
     <link rel="stylesheet" href="../css/globalstyling.css">
     <link rel="stylesheet" href="../css/chatstyling.css">
+    <link rel="stylesheet" href="../css/navstyling.css">
 </head>
 <body>
+<div id="chatMessages"></div>
 
+<input type="text" id="messageInput">
+<button onclick="sendMessage()">Send</button>
+
+<div class="navbar">
+    <a href="profile.html" class="nav-link"><i class="fas fa-user profile-icon"></i> Profile</a>
+    <a href="explore.html" class="nav-link"><i class="fas fa-search explore-icon"></i> Explore</a>
+    <a href="chats.html" class="nav-link"><i class="fas fa-comments chats-icon"></i> Chats</a>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.1/dist/sockjs.min.js"></script>
+<script src="../javascript/messages.js"></script>
 </body>
 </html>
