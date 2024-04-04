@@ -89,7 +89,7 @@ async function sendMessage() {
     let checkchat = await checkIfChatExists(myProfileId, clickedProfileId)
     if(checkchat !== false)
     {
-        localStorage.setItem("currentchat", checkchat)
+        localStorage.setItem("currentchat", JSON.stringify(checkchat))
         window.location.replace("messages.html")
     }
     else
@@ -97,7 +97,7 @@ async function sendMessage() {
         console.log(myProfileId)
         console.log(clickedProfileId)
         let theChat = await createChat(myProfileId, clickedProfileId);
-        localStorage.setItem("currentchat", theChat)
+        localStorage.setItem("currentchat", JSON.stringify(theChat))
         window.location.replace("messages.html")
     }
 }

@@ -22,7 +22,8 @@ async function fetchMyChats(id)
         const response = await fetch(`http://localhost:8080/getallmychats?userId=${id}`);
 
         if (response.ok) {
-            const chats = await response.json(); // Convert response body to JSON
+            let chats = await response.json();
+            JSON.stringify(chats)// Convert response body to JSON
             console.log('Chats fetched successfully:', chats);
             return chats; // Return the fetched chats array
         } else if (response.status === 404) {
@@ -82,7 +83,7 @@ async function findOtherActor(chat)
 // Function to handle chat click event
 function handleChatClick(chat) {
     alert('Clicked on chat with ' + them.name);
-    localStorage.setItem("currentchat", chat)
+    localStorage.setItem("currentchat", JSON.stringify(chat));
     window.location.replace("messages.html")
     // Add your logic to handle the click event here
 }
