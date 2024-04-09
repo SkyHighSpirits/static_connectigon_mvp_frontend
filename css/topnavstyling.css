@@ -11,7 +11,7 @@
 {
     justify-content: left;
     margin-right: 20px;
-    margin-left: 40px;
+    margin-left: 10px;
     text-decoration: none;
     margin-top: -10px;
     color: #fff;
@@ -23,7 +23,7 @@
 .top-navbar {
     background-image: url("/graphics/header 17.png");
     background-size: cover;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -61,4 +61,14 @@
 .logo-name
 {
     height: 30px;
+}
+.logo-image:hover
+{
+    scale: 96%;
+    transition: 0.2s;
+}
+.logo-name:hover
+{
+    scale: 96%;
+    transition: 0.2s;
 }

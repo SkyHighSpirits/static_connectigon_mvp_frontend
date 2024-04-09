@@ -1,4 +1,106 @@
 .frontpage-container
 {
-    margin-left: 40px;
+    font-family: Arial, "Acumin Variable Concept Wide";
+    color: black;
+}
+.frontpage-text
+{
+    display: flex;
+    font-family: Arial, "Acumin Variable Concept Wide";
+    margin-bottom: 0px;
+}
+.frontpage-text-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.frontpage-header-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.frontpage-underheader-text
+{
+    color: #6400ff;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.frontpage-header-text
+{
+    font-size: 46px;
+    color: #6400ff;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 1px white;
+    letter-spacing: 2px;
+}
+.frontpage-stars-img
+{
+    width: 60px;
+    height: 50px;
+}
+.frontpage-eyecatcher-container
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.frontpage-cta1-text
+{
+    color: #6400ff;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+.frontpage-puzzle-icon
+{
+    width: 80px;
+    height: 80px;
+}
+.frontpage-signup-icon
+{
+    width: 70px;
+    height: 88px;
+}
+.frontpage-signup-icon:hover
+{
+    width: 70px;
+    height: 88px;
+    scale: 0.96;
+    transition: 0.3s;
+}
+.frontpage-signup-text:hover
+{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    color: #6400ff;
+    transition: 0.3s;
+}
+.frontpage-idea-icon
+{
+    width: 80px;
+    height: 80px;
+}
+.frontpage-feedback-icon
+{
+    width: 120px;
+    height: 80px;
+}
+.text-column
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.frontpage-signup-text
+{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #6400ff;
 }

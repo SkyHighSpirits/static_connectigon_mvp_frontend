@@ -24,7 +24,7 @@ input[type="text"] {
     margin-bottom: 15px;
     border-radius: 5px;
     background-color: #ffffff;
-    color: #fff;
+    color: #000000;
     border: 2px solid #6400ff;
 }
 input[type="password"] {
@@ -45,5 +45,6 @@ input[type="submit"] {
     border: 2px solid #6400ff;
 }
 input[type="submit"]:hover {
-    background-color: #45a049;
+    scale: 96%;
+    background-color: #301934;
 }

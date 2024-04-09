@@ -1,0 +1,18 @@
+.footer-container
+{
+    margin: 0;
+    display: flex;
+    background-image: url("/graphics/connectigon_footer.png");
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    justify-content: space-around;
+    height: 400px;
+}
+.footer-div
+{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin: 5px 0px;
+    color: white;
+}

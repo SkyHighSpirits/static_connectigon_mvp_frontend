@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/signupstyling.css">
     <link rel="stylesheet" href="../css/globalstyling.css">
     <link rel="stylesheet" href="../css/topnavstyling.css">
+    <link rel="stylesheet" href="../css/footerstyling.css">
 
 </head>
 <body>
@@ -27,18 +28,34 @@
     <h2>Sign Up</h2>
     <Form id="sign_up_form">
         <label for="name_field">Name </label>
-        <input id="name_field" name="name" type="text">
+        <input id="name_field" name="name" type="text" required>
 
         <label for="email_field">Email Adress </label>
-        <input id="email_field" name="email" type="text">
+        <input id="email_field" name="email" type="text" required>
 
         <label for="password_field">Password </label>
-        <input id="password_field" name="password" type="password">
+        <input id="password_field" name="password" type="password" required>
 
-        <input type="submit">
+        <input type="submit" value="Create Account">
     </Form>
 </div>
-
+<div class="footer-container">
+    <div class="footer-div">
+        <h3>CONTACT</h3>
+        <p>+45 12 34 56 78</p>
+        <p>connectigon@gmail.com</p>
+    </div>
+    <div class="footer-div">
+        <h3>ADDRESS</h3>
+        <p>Guldbjergsgade 29N</p>
+        <p>2200 København N</p>
+    </div>
+    <div class="footer-div">
+        <h3>ABOUT US</h3>
+        <p>The Team</p>
+        <p>Our Proposal</p>
+    </div>
+</div>
 <script src="../javascript/signup.js"></script>
 </body>
 </html>
