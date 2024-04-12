@@ -1,0 +1,13 @@
+.profile-title-container
+{
+    margin-top: 40px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-stars-img
+{
+    width: 60px;
+    height: 50px;
+}

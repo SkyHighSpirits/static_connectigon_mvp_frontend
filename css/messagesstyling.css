@@ -1,0 +1,51 @@
+.messages-title-container
+{
+    margin-top: 40px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.messages-stars-img
+{
+    width: 60px;
+    height: 50px;
+}
+.sent-message {
+
+    text-align: right;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+/* Style for received messages */
+.received-message {
+    text-align: left;
+    background-color: #45a049;
+    color: White;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.sent-message-container
+{
+    display: flex; /* Use flexbox */
+    justify-content: flex-end;
+}
+
+.received-message-container
+{
+    display: flex; /* Use flexbox */
+    justify-content: flex-start;
+}
+
+.chat-container {
+    max-height: 400px; /* Set the maximum height of the chat container */
+    overflow-y: auto; /* Enable vertical scrolling */
+}

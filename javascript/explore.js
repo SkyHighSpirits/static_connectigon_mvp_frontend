@@ -48,10 +48,25 @@ function createProfileBox(profile) {
 
     const profileName = document.createElement('div');
     profileName.classList.add('profile-name');
-    profileName.textContent = profile.name;
+    profileName.textContent = profile.name + ", " + profile.age + " Y/O";
+
+    const profileTitle = document.createElement('div');
+    profileTitle.classList.add('profile-title');
+    profileTitle.textContent = profile.title;
+
+    const profileDescription = document.createElement('div');
+    profileDescription.classList.add('profile-description');
+    profileDescription.textContent = profile.description;
+
+    const profileVoicePicture = document.createElement('div');
+    profileVoicePicture.classList.add('profile-voice-img');
+
 
     profileBox.appendChild(profileImg);
     profileBox.appendChild(profileName);
+    profileBox.appendChild(profileTitle);
+    profileBox.appendChild(profileDescription);
+    profileBox.appendChild(profileVoicePicture);
     profileGrid.appendChild(profileBox);
 }
 
@@ -62,7 +77,7 @@ async function viewProfile() {
     const expandedName = document.getElementById('expanded-name');
     const expandedDescription = document.getElementById('expanded-description');
 
-    expandedName.textContent = clickedProfile.name;
+    expandedName.textContent = clickedProfile.name + ", " + clickedProfile.title + ", " + clickedProfile.age + " Y/O ";
     expandedDescription.textContent = clickedProfile.description;
 
     overlay.style.display = 'flex';
