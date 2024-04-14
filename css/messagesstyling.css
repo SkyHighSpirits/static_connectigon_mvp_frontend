@@ -12,11 +12,13 @@
     height: 50px;
 }
 .sent-message {
-
-    text-align: right;
-    background-color: #4CAF50;
+    min-width: 200px;
+    text-align: left;
+    background-color: #6400ff;
     color: white;
+    opacity: 80%;
     padding: 10px;
+    font-size: 14px;
     margin: 5px;
     border-radius: 10px;
     max-width: 300px;
@@ -24,9 +26,11 @@
 
 /* Style for received messages */
 .received-message {
+    min-width: 200px;
     text-align: left;
-    background-color: #45a049;
-    color: White;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: black;
     padding: 10px;
     margin: 5px;
     border-radius: 10px;
@@ -35,17 +39,81 @@
 
 .sent-message-container
 {
+    width: 30vw;
+    min-width: 300px;
     display: flex; /* Use flexbox */
     justify-content: flex-end;
 }
 
 .received-message-container
 {
+    min-width: 300px;
+    width: 30vw;
     display: flex; /* Use flexbox */
     justify-content: flex-start;
 }
 
 .chat-container {
-    max-height: 400px; /* Set the maximum height of the chat container */
+    position: center;
+    max-height: 45vh; /* Set the maximum height of the chat container */
     overflow-y: auto; /* Enable vertical scrolling */
+}
+.send-message-container
+{
+    position: absolute;
+    bottom: 100px;
+}
+.main-container
+{
+    height: 20vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+#chatMessages
+{
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    position: relative;
+    left: 35%;
+    border-radius: 10px;
+    background-color: #ddcfff;
+    opacity: 80%;
+    border: #6400ff solid;
+}
+.send-message
+{
+    height: 40px;
+    border-radius: 5px;
+    width: 20vw;
+}
+#sendButton {
+    background-image: url('/graphics/connectigon_arrow.png');
+    background-size: cover; /* Adjust as needed */
+    background-color: #ddcfff;
+    opacity: 50%;
+    width: 50px; /* Adjust width and height to match your image */
+    height: 50px;
+    border: none; /* Remove default button styling */
+    cursor: pointer; /* Ensure cursor changes on hover */
+}
+
+#sendButton:hover {
+    scale: 92%;
+    transition: 0.2s;
+    opacity: 100%;
+}
+
+/* Optional: Hide default button text */
+#sendButton::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

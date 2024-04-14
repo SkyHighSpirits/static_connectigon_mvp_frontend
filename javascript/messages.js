@@ -41,7 +41,10 @@ function displayMessage(message) {
     var isCurrentUser = message.sentByUserid.id === currentUser.id;
 
     // Set the text content of the message element
-    messageElement.textContent = message.message;
+    messageElement.innerHTML = message.sentByUserid.name + "<br><br>" + message.message;
+
+
+
 
     // Add a class to the message element based on the sender
     if (isCurrentUser) {
