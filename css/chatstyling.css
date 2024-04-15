@@ -9,13 +9,20 @@
     margin: 0;
 }
 .chat-item {
-    border-bottom: 1px solid #ccc;
+    border: 1px solid #6400ff;
+    background-color: #ddcfff;
+    color: black;
+    opacity: 80%;
     border-radius: 3px;
     padding: 10px 0;
     display: flex;
     align-items: center;
     cursor: pointer;
     margin-bottom: 20px;
+}
+.chat-item:hover {
+    scale: 102%;
+    box-shadow: 2px 2px 4px;
 }
 .profile-img {
     width: 50px;
@@ -25,7 +32,6 @@
     margin-right: 10px;
 }
 .profile-name {
-    color: #fff;
     font-size: 16px;
     margin: 0;
 }

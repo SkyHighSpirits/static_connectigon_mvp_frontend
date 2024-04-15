@@ -40,32 +40,34 @@
 .sent-message-container
 {
     width: 30vw;
-    min-width: 300px;
+    min-width: 480px;
     display: flex; /* Use flexbox */
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .received-message-container
 {
-    min-width: 300px;
+    min-width: 480px;
     width: 30vw;
     display: flex; /* Use flexbox */
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .chat-container {
     position: center;
-    max-height: 45vh; /* Set the maximum height of the chat container */
+    max-height: 30vh; /* Set the maximum height of the chat container */
     overflow-y: auto; /* Enable vertical scrolling */
 }
 .send-message-container
 {
     position: absolute;
-    bottom: 100px;
+    bottom: 60px;
 }
 .main-container
 {
-    height: 20vh;
+    height: 10vh;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -78,23 +80,22 @@
     flex-direction: column;
     width: 60vw;
     position: relative;
-    left: 35%;
+    left: 34%;
     border-radius: 10px;
-    background-color: #ddcfff;
-    opacity: 80%;
-    border: #6400ff solid;
 }
 .send-message
 {
-    height: 40px;
+    margin-top: 20px;
+    height: 38px;
     border-radius: 5px;
     width: 20vw;
 }
 #sendButton {
     background-image: url('/graphics/connectigon_arrow.png');
     background-size: cover; /* Adjust as needed */
-    background-color: #ddcfff;
-    opacity: 50%;
+    background-color: transparent;
+    opacity: 80%;
+    margin-left: 5px;
     width: 50px; /* Adjust width and height to match your image */
     height: 50px;
     border: none; /* Remove default button styling */
@@ -110,10 +111,10 @@
 /* Optional: Hide default button text */
 #sendButton::after {
     content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+}
+.message-name
+{
+    margin: 0;
+    margin-left: 10px;
+    color: black;
 }

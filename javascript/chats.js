@@ -48,12 +48,14 @@ async function createChatItem(chat) {
     await findOtherActor(chat);
 
     const profileImg = document.createElement('img');
-    profileImg.src = "images/1.png";
+    profileImg.src = "/graphics/anonymous profile.png";
     profileImg.alt = 'Profile Image';
     profileImg.classList.add('profile-img');
 
     const profileName = document.createElement('p');
-    profileName.textContent = "Chat with " + them.name;
+    const lastMessage = JSON.stringify(chat.messages[chat.messages.length - 1].message);
+    profileName.innerHTML = "Chat with " + them.name + "<br>" + lastMessage;
+
     profileName.classList.add('profile-name');
 
     chatItem.appendChild(profileImg);
@@ -82,7 +84,6 @@ async function findOtherActor(chat)
 
 // Function to handle chat click event
 function handleChatClick(chat) {
-    alert('Clicked on chat with ' + them.name);
     localStorage.setItem("currentchat", JSON.stringify(chat));
     window.location.replace("messages.html")
     // Add your logic to handle the click event here

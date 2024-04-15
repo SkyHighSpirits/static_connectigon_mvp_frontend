@@ -36,12 +36,17 @@ function displayMessage(message) {
     var messageContainer = document.createElement('div');
     var chatMessages = document.getElementById('chatMessages');
     var messageElement = document.createElement('div');
+    var nameElement = document.createElement('h4');
+    nameElement.classList.add('message-name');
 
     // Check if the message sender is the current user
     var isCurrentUser = message.sentByUserid.id === currentUser.id;
 
     // Set the text content of the message element
-    messageElement.innerHTML = message.sentByUserid.name + "<br><br>" + message.message;
+    messageElement.innerHTML = message.message;
+    nameElement.innerText = message.sentByUserid.name;
+
+
 
 
 
@@ -53,6 +58,7 @@ function displayMessage(message) {
     } else {
         messageElement.classList.add('received-message');
         messageContainer.classList.add('received-message-container');
+        messageContainer.appendChild(nameElement);
     }
 
     // Append the message element to the chat messages container
